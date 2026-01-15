@@ -1,6 +1,7 @@
 # DK Does Payments
 
 A professional payment technology consulting website built as a demo for the Build Club meetup. This project showcases a full-stack application integrating payment processing, modern React UI, and a clean Express.js backend.
+
 Built with Replit using the following prompt:
 ```
 Create a web app for a Payments Technology Consultant named "DK does payments".
@@ -8,6 +9,10 @@ Add a page about the founder Damian Karzon using information from here: https://
 Add a page where users can book a 1 hour session for a fee of $99
 Integrate online payments using Pinch Payments (See https://docs.getpinch.com.au/llms.txt ) to pay for services, make use of the new Payment Links feature (https://docs.getpinch.com.au/docs/payment-links)
 ```
+
+### AI tools during demo
+- https://replit.com/
+- https://cursor.com/
 
 ## 🎯 Project Overview
 
@@ -73,8 +78,8 @@ This project was created as a live coding demonstration for the Build Club meetu
    PORT=5000
    NODE_ENV=development
    DATABASE_URL=postgresql://user:password@localhost:5432/dk_does_payments
-   PINCH_API_KEY=your_pinch_api_key
-   PINCH_API_URL=https://api.getpinch.com.au
+   PINCH_APP_ID=your_pinch_application_id
+   PINCH_SECRET_KEY=your_pinch_application_secret
    ```
 
 4. **Set up the database**

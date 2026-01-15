@@ -41,7 +41,7 @@ interface CreatePaymentLinkParams {
 }
 
 class PinchPaymentsClient {
-  private merchantId: string;
+  private appId: string;
   private secretKey: string;
   private baseUrl: string;
   private accessToken: string | null = null;
@@ -49,17 +49,17 @@ class PinchPaymentsClient {
   private credentialsValid: boolean;
 
   constructor() {
-    this.merchantId = process.env.PINCH_MERCHANT_ID || "";
+    this.appId = process.env.PINCH_APP_ID || "";
     this.secretKey = process.env.PINCH_SECRET_KEY || "";
 
     // Use test API for development (test mode)
     this.baseUrl = "https://api.getpinch.com.au/test";
 
-    this.credentialsValid = Boolean(this.merchantId && this.secretKey);
+    this.credentialsValid = Boolean(this.appId && this.secretKey);
 
     if (!this.credentialsValid) {
       console.error(
-        "CRITICAL: Pinch Payments credentials not configured. Set PINCH_MERCHANT_ID and PINCH_SECRET_KEY environment variables.",
+        "CRITICAL: Pinch Payments credentials not configured. Set PINCH_APP_ID and PINCH_SECRET_KEY environment variables.",
       );
     }
   }
@@ -83,7 +83,7 @@ class PinchPaymentsClient {
     }
 
     const authString = Buffer.from(
-      `${this.merchantId}:${this.secretKey}`,
+      `${this.appId}:${this.secretKey}`,
     ).toString("base64");
 
     const response = await fetch("https://auth.getpinch.com.au/connect/token", {
