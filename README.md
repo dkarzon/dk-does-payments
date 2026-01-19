@@ -10,6 +10,8 @@ Add a page where users can book a 1 hour session for a fee of $99
 Integrate online payments using Pinch Payments (See https://docs.getpinch.com.au/llms.txt ) to pay for services, make use of the new Payment Links feature (https://docs.getpinch.com.au/docs/payment-links)
 ```
 
+Can be viewed here: https://dk-payments-consultant--dkarzon-ai.replit.app/
+
 ### AI tools during demo
 - https://replit.com/
 - https://cursor.com/
